@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand palette — taken from the approved SignFix design reference */
+  --color-paper: #f7f9fb;
+  --color-ink: #101820;
+  --color-muted: #5b6570;
+  --color-line: #e2e7eb;
+
+  --color-navy: #071a2d;
+  --color-navy-soft: #0b2135;
+  --color-navy-line: #1c3550;
+  --color-slate: #8fa3b5;
+  --color-cloud: #c7d2dc;
+
+  --color-blue: #123b5a;
+  --color-blue-line: #2a5578;
+
+  --color-amber: #ffb000;
+  --color-amber-hover: #ffc133;
+  --color-amber-soft: #f5a300;
+
+  --font-display: var(--font-bricolage), "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: var(--font-public-sans), "Public Sans", system-ui, sans-serif;
+  --font-mono-label: var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
+}
+
+@keyframes sf-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-muted);
+  font-family: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
