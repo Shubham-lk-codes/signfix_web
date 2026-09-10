@@ -2,12 +2,12 @@
   "name": "signfix-nextjs",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --webpack",
-    "build": "next build",
-    "start": "node server.js",
-    "lint": "eslint"
-  },
+ "scripts": {
+  "dev": "next dev --webpack",
+  "build": "next build --webpack",
+  "start": "node server.js",
+  "lint": "eslint"
+},
   "dependencies": {
     "framer-motion": "^13.2.0",
     "lucide-react": "^1.43.0",
