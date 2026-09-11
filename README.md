@@ -16,6 +16,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## cPanel static build
+
+This repository uses `output: "export"`; `npm run build` writes the deployable
+website to `out`. The committed `.npmrc` keeps build-time dependencies available
+when CloudLinux/cPanel sets `NODE_ENV=production`:
+
+```bash
+npm ci --include=dev
+npm run build
+test -f out/index.html
+```
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
