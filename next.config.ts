@@ -13,7 +13,9 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     cpus: 1,
-    workerThreads: false,
+    // CloudLinux may reject child-process spawn() with EAGAIN even when the
+    // worker count is one. Use one worker thread inside the build process.
+    workerThreads: true,
     webpackBuildWorker: false,
     parallelServerCompiles: false,
     parallelServerBuildTraces: false,
